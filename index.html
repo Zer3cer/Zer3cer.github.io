@@ -40,7 +40,7 @@
     ::selection { background: var(--accent); color: #fff; }
     img { display: block; }
 
-    /* ===== 背景层 ===== */
+    
     .bg-atmosphere {
       position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden;
     }
@@ -79,7 +79,7 @@
       -webkit-mask-image: radial-gradient(ellipse 60% 50% at 50% 30%, black 10%, transparent 100%);
     }
 
-    /* 扫描线效果 */
+    
     .scanlines {
       position: fixed; inset: 0; z-index: 0; pointer-events: none;
       background: repeating-linear-gradient(
@@ -88,7 +88,7 @@
       );
     }
 
-    /* 鼠标跟随 */
+    
     .cursor-glow {
       position: fixed; width: 500px; height: 500px;
       border-radius: 50%; pointer-events: none; z-index: 0;
@@ -96,7 +96,7 @@
       transform: translate(-50%, -50%);
     }
 
-    /* ===== 导航 ===== */
+    
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       padding: 18px 40px;
@@ -127,7 +127,7 @@
     .nav-links a:hover { color: var(--fg); }
     .nav-links a:hover::after { width: 100%; }
 
-    /* 语言切换 */
+    
     .lang-toggle {
       display: flex; align-items: center; gap: 0;
       margin-left: 16px; padding: 3px;
@@ -144,7 +144,7 @@
       background: var(--accent); color: #fff;
     }
 
-    /* ===== 通用 ===== */
+    
     main { position: relative; z-index: 1; }
     .section-header { text-align: center; margin-bottom: 64px; }
     .section-tag {
@@ -158,7 +158,7 @@
     }
     section { padding: 100px 24px; }
 
-    /* ===== Hero ===== */
+    
     .hero {
       min-height: 100vh; display: flex; flex-direction: column;
       justify-content: center; align-items: center; text-align: center;
@@ -203,7 +203,7 @@
       to   { opacity: 1; transform: translateY(0); }
     }
 
-    /* Hero 底部终端装饰 */
+    
     .hero-terminal {
       margin-top: 64px; animation: fadeUp 0.8s 0.65s ease both;
       width: 100%; max-width: 540px;
@@ -245,7 +245,7 @@
       50% { opacity: 0; }
     }
 
-    /* ===== 按钮 ===== */
+    
     .btn {
       display: inline-flex; align-items: center; gap: 8px;
       padding: 14px 28px; border-radius: 12px; font-size: 0.92rem;
@@ -265,7 +265,7 @@
       border-color: var(--fg-muted); transform: translateY(-2px);
     }
 
-    /* ===== 统计 ===== */
+    
     .stats-bar {
       display: flex; justify-content: center; gap: 56px; flex-wrap: wrap;
       padding: 48px 24px;
@@ -279,7 +279,7 @@
     .stat-num span { color: var(--accent); }
     .stat-label { font-size: 0.82rem; color: var(--fg-muted); margin-top: 8px; }
 
-    /* ===== 关于 ===== */
+    
     .about-grid {
       display: grid; grid-template-columns: 1fr 1fr; gap: 64px;
       max-width: 1100px; margin: 0 auto; align-items: center;
@@ -335,7 +335,7 @@
       background: var(--accent-dim);
     }
 
-    /* ===== 项目 ===== */
+    
     .projects-grid {
       display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
       gap: 24px; max-width: 1100px; margin: 0 auto;
@@ -384,7 +384,7 @@
     .project-tags span.red { background: var(--accent-dim); color: var(--accent); }
     .project-tags span.blue { background: var(--cyan-dim); color: var(--cyan); }
 
-    /* ===== 技能 ===== */
+    
     .skills-container {
       max-width: 900px; margin: 0 auto;
       display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
@@ -422,7 +422,7 @@
     }
     .skill-bar.animated { transform: scaleX(1); }
 
-    /* ===== 联系 ===== */
+    
     .contact-box {
       max-width: 640px; margin: 0 auto; text-align: center;
       padding: 64px 40px; border-radius: var(--radius);
@@ -452,7 +452,7 @@
       transform: translateY(-2px);
     }
 
-    /* ===== Footer ===== */
+    
     footer {
       text-align: center; padding: 40px 24px;
       border-top: 1px solid var(--border);
@@ -460,14 +460,14 @@
     }
     footer a { color: var(--accent); }
 
-    /* ===== 滚动动画 ===== */
+    
     .reveal {
       opacity: 0; transform: translateY(40px);
       transition: opacity 0.7s ease, transform 0.7s ease;
     }
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
-    /* ===== 响应式 ===== */
+    
     @media (max-width: 768px) {
       nav { padding: 14px 20px; }
       .nav-links { display: none; }
@@ -587,7 +587,6 @@
       </div>
     </div>
 
-    <!-- 关于 -->
     <section id="about">
       <div class="section-header reveal">
         <div class="section-tag" data-i18n="about_tag">About</div>
@@ -628,7 +627,6 @@
       </div>
     </section>
 
-    <!-- 项目 -->
     <section id="projects">
       <div class="section-header reveal">
         <div class="section-tag" data-i18n="proj_tag">Arsenal</div>
@@ -637,7 +635,6 @@
       <div class="projects-grid" id="projectsGrid"></div>
     </section>
 
-    <!-- 技能 -->
     <section id="skills">
       <div class="section-header reveal">
         <div class="section-tag" data-i18n="skill_tag">Skills</div>
@@ -646,7 +643,6 @@
       <div class="skills-container" id="skillsContainer"></div>
     </section>
 
-    <!-- 联系 -->
     <section id="contact">
       <div class="contact-box reveal">
         <h3 data-i18n="contact_h3">Let's Connect</h3>
@@ -676,9 +672,6 @@
   </footer>
 
   <script>
-    /* ======================================================
-       双语系统
-       ====================================================== */
     const i18n = {
       en: {
         nav_about: 'About',
@@ -712,7 +705,7 @@
         skill_title: 'Technical Capabilities',
         contact_h3: "Let's Connect",
         contact_p: 'Collaboration, security research, or just a chat about offensive techniques — always open.',
-        /* 项目数据 */
+        
         proj_0_title: 'ShadowC2',
         proj_0_desc: 'Self-developed C2 framework with multi-protocol communication (HTTPS/DNS/ICMP), modular post-exploitation, and OPSEC-aware beaconing strategies.',
         proj_1_title: 'ReconNexus',
@@ -725,7 +718,7 @@
         proj_4_desc: 'Covert tunneling tool supporting SOCKS5 proxy chaining through compromised hosts. Designed for pivoting in segmented networks with minimal footprint.',
         proj_5_title: 'BugHunter CLI',
         proj_5_desc: 'Bug bounty reconnaissance CLI that automates target discovery, parameter fuzzing, and vulnerability scanning with customizable attack profiles.',
-        /* 技能数据 */
+        
         sk_0_name: 'Penetration Testing',
         sk_0_0: 'Web App (OWASP Top 10)',
         sk_0_1: 'Network Pentest',
@@ -829,7 +822,7 @@
         btn.classList.toggle('active', btn.dataset.lang === lang);
       });
       document.documentElement.lang = lang;
-      /* 重新渲染动态内容 */
+      
       renderProjects(lang);
       renderSkills(lang);
     }
@@ -838,9 +831,6 @@
       btn.addEventListener('click', () => applyLang(btn.dataset.lang));
     });
 
-    /* ======================================================
-       项目数据
-       ====================================================== */
     const projectsMeta = [
       { type: 'platform', tags: [['Python', 'red'], ['Go', 'blue'], ['gRPC', 'blue']], imgSeed: 'shadowc2' },
       { type: 'tool',      tags: [['Python', 'red'], ['React', 'blue'], ['PostgreSQL', 'blue']], imgSeed: 'reconnexus' },
@@ -876,7 +866,7 @@
           </div>
         `;
         grid.appendChild(card);
-        /* 立即检查可见性 */
+        
         setTimeout(() => {
           const rect = card.getBoundingClientRect();
           if (rect.top < window.innerHeight - 50) card.classList.add('visible');
@@ -884,9 +874,7 @@
       });
     }
 
-    /* ======================================================
-       技能数据
-       ====================================================== */
+
     const skillsMeta = [
       { icon: 'fa-solid fa-crosshairs', color: 'red', pcts: [92, 88, 85, 78] },
       { icon: 'fa-solid fa-user-secret', color: 'cyan', pcts: [95, 90, 82, 88] },
@@ -935,12 +923,9 @@
       });
     }
 
-    /* 初始渲染 */
+    
     applyLang(currentLang);
 
-    /* ======================================================
-       滚动观察器
-       ====================================================== */
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -958,13 +943,10 @@
       document.querySelectorAll('.reveal, .project-card').forEach(el => observer.observe(el));
     }
     observeAll();
-    /* 每次 renderProjects/renderSkills 后重新观察 */
+    
     const origRenderP = renderProjects;
     const origRenderS = renderSkills;
 
-    /* ======================================================
-       数字递增
-       ====================================================== */
     const statNums = document.querySelectorAll('.stat-num[data-target]');
     const statObs = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -984,17 +966,12 @@
     }, { threshold: 0.5 });
     statNums.forEach(el => statObs.observe(el));
 
-    /* ======================================================
-       导航滚动
-       ====================================================== */
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 60);
     }, { passive: true });
 
-    /* ======================================================
-       鼠标跟随
-       ====================================================== */
+    
     const cursorGlow = document.getElementById('cursorGlow');
     let mx = -500, my = -500;
     document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; }, { passive: true });
